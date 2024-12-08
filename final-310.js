@@ -24,9 +24,14 @@ function helpMessage() {
 }
 setTimeout(helpMessage, 2000);
 
-function stopMessage() {
-  clearTimeout(helpMessage);
+//local storage
+let notice = JSON.stringify(alertContent);
+
+function storeNotice() {
+localStorage.setItem('notice', notice);
+console.log(notice);
 }
+storeNotice();
 
 //form validation
 const fName = document.getElementById('fName');
