@@ -1,0 +1,62 @@
+//using fetch to get the YouTube API
+const videoSection = document.querySelector('section');
+const loader = document.querySelector('.loader-box');
+
+function getVideo() {
+
+fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=AIzaSyDu0XoK-4KitG1sLxKzankX9DGd6Hx6PD4')
+.then(res => res.json())
+.then(data => {
+ loader.style.display = 'none';
+ data.items.forEach(el => {
+  videoSection.innerHTML = 
+  `<a target="_blank" href="https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}" class="yt-video">
+  <img src="${el.snippet.thumbnails.medium.url}" />
+  <h4>${el.snippet.title}</h4>
+  </a>`
+  });
+});
+};
+getVideo();
+
+function helpMessage() {
+  alert(alertContent);
+}
+setTimeout(helpMessage, 2000);
+
+function stopMessage() {
+  clearTimeout(helpMessage);
+}
+
+//form validation
+const fName = document.getElementById('fName');
+const lName = document.getElementById('lName');
+const email = document.getElementById('email');
+const regex = /\w+@\w+\.\w+/;
+
+form.addEventListener('submit', (e) => {
+  let messages = [];
+  if (fName.value === '' || fName.value == null || lName.value === '' || lName.value == null) {
+    alert('First and last name is required.');
+  }
+
+  if (messages.length > 0) {
+    e.preventDefault();
+  }
+
+  //using regex to validate emails
+  if (!email.value.match(/\w+@\w+\.\w+/)) {
+     alert('Please enter a valid email.')
+     return false;
+   }
+
+});
+
+//Setting up the snackbar
+const button = document.getElementById('snackbarButton');
+const snackBar = document.getElementById('snackbar');
+button.addEventListener('click', function() {
+   snackBar.className = 'show';
+   setTimeout(function(){ snackBar.className = snackBar.className.replace('show', ''); }, 3000);
+});
+

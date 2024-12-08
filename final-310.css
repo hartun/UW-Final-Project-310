@@ -1,0 +1,128 @@
+/* Center the form on the page */
+    text-align: center;
+    background-color: whitesmoke
+  }
+  
+  h1 {
+    font: 2em sans-serif;
+  }
+
+  h3 {
+    font: 1em sans-serif;
+  }
+
+  h4 {
+    font: 1em sans-serif;
+  }
+
+  h5 {
+    font: 1em sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+  }
+
+  .loader-box {
+    display: inline-block;
+    place-items: center;
+    width: 50%;
+    height: 250px;
+    background: whitesmoke;
+    border-radius: 5px;
+    overflow: auto;
+    margin-bottom: 5px;
+  }
+
+  .yt-video {
+    display: inline-block;
+    text-decoration: none;
+    background: whitesmoke;
+    width: 50%;
+    height: 250px;
+    border: 5px black;
+    border-radius: 5px;
+    overflow: auto;
+    margin-bottom: 5px;
+  }
+
+  .loader {...
+  }
+
+  @keyframes mulShdSpin {...
+    
+  }
+
+  form {
+    display: inline-block;
+    position: center;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  }
+  
+  p + p {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    font: 1em sans-serif;
+    display: inline-block;
+    min-width: 90px;
+    text-align: right;
+  }
+  
+  input,
+  text {
+    /* To make sure that all text fields have the same font settings
+       By default, text areas have a monospace font */
+    font: 1em sans-serif;
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+    /* Match form field borders */
+    border: 1px solid #999;
+  }
+  
+  input:focus,
+  text:focus {
+    /* Set the outline width and style */
+    outline-style: solid;
+    /* To give a little highlight on active elements */
+    outline-color: #000;
+  }
+    
+  .button {
+    /* Align buttons with the text fields */
+    text-align: center; 
+    margin-top: 10px;
+  }
+
+#snackbarContainer {
+  position: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+    
+/* snackbar position */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  font: 1em sans-serif;
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: static;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+/* Show the snackbar on button click */
+#snackbar.show {
+  visibility: visible;
+}
