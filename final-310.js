@@ -19,6 +19,8 @@ fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxR
 };
 getVideo();
 
+let alertContent = 'Have questions? Text (260) 867-5309.'
+
 function helpMessage() {
   alert(alertContent);
 }
@@ -27,11 +29,8 @@ setTimeout(helpMessage, 2000);
 //local storage
 let notice = JSON.stringify(alertContent);
 
-function storeNotice() {
 localStorage.setItem('notice', notice);
-console.log(notice);
-}
-storeNotice();
+localStorage.getItem('notice');
 
 //form validation
 const fName = document.getElementById('fName');
@@ -64,4 +63,3 @@ button.addEventListener('click', function() {
    snackBar.className = 'show';
    setTimeout(function(){ snackBar.className = snackBar.className.replace('show', ''); }, 3000);
 });
-
