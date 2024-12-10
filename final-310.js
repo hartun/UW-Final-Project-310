@@ -4,7 +4,7 @@ const loader = document.querySelector('.loader-box');
 
 function getVideo() {
 
-fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=AIzaSyDu0XoK-4KitG1sLxKzankX9DGd6Hx6PD4')
+fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=[API KEY HERE]')
 .then(res => res.json())
 .then(data => {
  loader.style.display = 'none';
