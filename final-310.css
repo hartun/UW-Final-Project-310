@@ -96,8 +96,3 @@
   left: 50%;
   bottom: 30px;
 }
-
-/* Show the snackbar on button click */
-#snackbar.show {
-  visibility: visible;
-}
