@@ -3,7 +3,7 @@ const videoSection = document.querySelector('section');
 
 function getVideo() {
 
-fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=[API KEY HERE]')
+fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=2&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=[API KEY HERE]')
 .then(result => result.json())
 .then(data => {
  data.items.forEach(e => {
