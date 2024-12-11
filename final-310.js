@@ -1,13 +1,11 @@
 //using fetch to get the YouTube API
 const videoSection = document.querySelector('section');
-const loader = document.querySelector('.loader-box');
 
 function getVideo() {
 
 fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=[API KEY HERE]')
 .then(res => res.json())
 .then(data => {
- loader.style.display = 'none';
  data.items.forEach(e => {
   videoSection.innerHTML = 
   `<a target="_blank" href="https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}" class="video">
