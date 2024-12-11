@@ -24,7 +24,7 @@
   }
 
   .video {
-    display: inline-block;
+    display: inline;
     text-decoration: none;
     background: whitesmoke;
     width: 50%;
