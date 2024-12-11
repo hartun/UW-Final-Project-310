@@ -34,7 +34,7 @@
     margin-bottom: 5px;
   }
 
-  .yt-video {
+  .video {
     display: inline-block;
     text-decoration: none;
     background: whitesmoke;
@@ -44,13 +44,6 @@
     border-radius: 5px;
     overflow: auto;
     margin-bottom: 5px;
-  }
-
-  .loader {...
-  }
-
-  @keyframes mulShdSpin {...
-    
   }
 
   form {
