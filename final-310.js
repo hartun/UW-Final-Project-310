@@ -3,11 +3,11 @@ const videoSection = document.querySelector('section');
 
 function getVideo() {
 
-fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=2&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=[API KEY HERE]')
+fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=2&playlistId=UUWgIYO_NDj9RyuqUXY4GttQ&key=[API_KEY]')
 .then(result => result.json())
 .then(data => {
  data.items.forEach(e => {
-  videoSection.innerHTML = 
+  videoSection.innerHTML += 
   `<a target="_blank" href="https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}" class="video">
   <img src="${e.snippet.thumbnails.medium.url}" />
   <h4>${e.snippet.title}</h4>
