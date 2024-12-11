@@ -23,17 +23,6 @@
     color: red;
   }
 
-  .loader-box {
-    display: inline-block;
-    place-items: center;
-    width: 50%;
-    height: 250px;
-    background: whitesmoke;
-    border-radius: 5px;
-    overflow: auto;
-    margin-bottom: 5px;
-  }
-
   .video {
     display: inline-block;
     text-decoration: none;
@@ -59,7 +48,6 @@
   }
   
   label {
-    /* Uniform size & alignment */
     font: 1em sans-serif;
     display: inline-block;
     min-width: 90px;
@@ -68,26 +56,19 @@
   
   input,
   text {
-    /* To make sure that all text fields have the same font settings
-       By default, text areas have a monospace font */
     font: 1em sans-serif;
-    /* Uniform text field size */
     width: 300px;
     box-sizing: border-box;
-    /* Match form field borders */
     border: 1px solid #999;
   }
   
   input:focus,
   text:focus {
-    /* Set the outline width and style */
     outline-style: solid;
-    /* To give a little highlight on active elements */
     outline-color: #000;
   }
     
   .button {
-    /* Align buttons with the text fields */
     text-align: center; 
     margin-top: 10px;
   }
